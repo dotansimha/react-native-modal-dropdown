@@ -267,7 +267,7 @@ export default class ModalDropdown extends Component {
     let key = `row_${rowID}`;
     let highlighted = rowID == this.state.selectedIndex
     let row = !this.props.renderRow ?
-      (<Text style={[styles.rowText, highlighted && styles.highlightedRowText]}>
+      (<Text style={[styles.rowText, highlighted && styles.highlightedRowText, this.props.itemTextStyle]}>
         {rowData}
       </Text>) :
       this.props.renderRow(rowData, rowID, highlighted);
